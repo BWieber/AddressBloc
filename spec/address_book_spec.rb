@@ -24,7 +24,7 @@ require_relative '../models/address_book'
         expect(book.entries.size).to eq (1)
         book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
         expect(book.entries.size).to eq (2)
-        book.remove_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+        book.remove_entry('Brandon', '452.425.1234', 'brandon@gmail.com')
         expect(book.entries.size).to eq (1)
     end
 

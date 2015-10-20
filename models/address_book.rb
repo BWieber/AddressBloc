@@ -20,7 +20,7 @@ require_relative 'entry'
 
      @entries.insert(index, Entry.new(name, phone_number, email))
    end
- end
+
 
   def remove_entry(name, phone_number, email)
       @entries.each do |entry|
@@ -31,3 +31,4 @@ require_relative 'entry'
         end
       end
   end
+end
