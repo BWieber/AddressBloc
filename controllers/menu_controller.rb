@@ -14,7 +14,8 @@ require_relative '../models/address_book'
      puts "2 - Create an entry"
      puts "3 - Search for an entry"
      puts "4 - Import entries from a CSV"
-     puts "5 - Exit"
+     puts "5 - Delete all entries (WARNING! THIS CANNOT BE UNDONE)"
+     puts "6 - Exit"
      print "Enter your selection: "
 
 
@@ -39,6 +40,10 @@ require_relative '../models/address_book'
        read_csv
        main_menu
      when 5
+       system "clear"
+       demolish
+       main_menu
+     when 6
        puts "Good-bye!"
 
        exit(0)
@@ -101,6 +106,12 @@ end
      puts "Updated entry:"
      puts entry
    end
+
+   def demolish
+     @address_book.entries.slice!(0..-1)
+     puts "All entries have been deleted."
+   end
+
 
    def search_entries
      print "Search by name: "
