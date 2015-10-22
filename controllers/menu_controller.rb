@@ -107,7 +107,8 @@ end
      name = gets.chomp
 
      match = @address_book.binary_search(name)
-system "clear"
+
+     system "clear"
 
      if match
        puts match.to_s
